@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./toDoList.css";
+import "./ToDoList.css";
 import { TiTickOutline } from "react-icons/ti";
 import { MdDeleteOutline } from "react-icons/md";
 import { FcTodoList } from "react-icons/fc";
