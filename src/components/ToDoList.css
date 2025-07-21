@@ -1,0 +1,148 @@
+/* Reset and Base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f2f2;
+}
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.logo {
+  font-size: 40px;
+  color: black;
+  animation: dance 0.6s infinite alternate ease-in-out;
+}
+@keyframes dance {
+  from {
+    transform: translateX(-10px);
+  }
+  to {
+    transform: translateX(10px);
+  }
+}
+
+/* Main Container */
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Heading */
+.container h1 {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+/* Input and Button Row */
+.container input[type="text"] {
+  width: 65%;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+  outline: none;
+}
+
+.container button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.container button:hover {
+  background-color: #0056b3;
+}
+
+/* List Container */
+.listContainer {
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Individual List Items */
+.listContainer li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.listContainer li:hover {
+  background-color: #e9ecef;
+}
+
+/* Task Text */
+.listContainer li div:first-child {
+  flex: 1;
+  text-align: left;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+/* Completed Task */
+.linethrough {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Icons Area */
+.listContainer li div:last-child button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-left: 0.6rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  color: #333;
+}
+
+.listContainer li div:last-child button:hover {
+  transform: scale(1.2);
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .container input[type="text"] {
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .container button {
+    width: 100%;
+  }
+
+  .listContainer li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .listContainer li div:last-child {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 1rem;
+  }
+}
